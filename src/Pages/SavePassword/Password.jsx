@@ -29,19 +29,19 @@ const Password = ({ savedata, setSaveData }) => {
 
   const saveData = (e) => {
     e.preventDefault();
-    const itemExists = savedata.some((item) => item.name === inputValue.name);
+    const itemExists = savedata.some(
+      (item) => item.name === inputValue.name && item.email === inputValue.email
+    );
+
     if (location.state && location.state.index !== undefined) {
       const index = location.state.index;
       const updatedData = [...savedata];
       updatedData[index] = inputValue;
       setSaveData(updatedData);
       localStorage.setItem("Data", JSON.stringify(updatedData));
-
-    } 
-    else if (itemExists) {
+    } else if (itemExists) {
       alert("Account detail already exists.");
-    }
-    else {
+    } else {
       const updatedData = [...savedata, inputValue];
       setSaveData(updatedData);
       localStorage.setItem("Data", JSON.stringify(updatedData));
