@@ -63,5 +63,9 @@
     grid-template-columns: repeat(1, 1fr);
     width: 120%;
   }
+  .no-data{
+    position: static;
+    left: 0%;
+  }
 
 }
