@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Pages/Navbar/Navbar";
+import Show from "./Pages/ShowPassword/Show";
+import Password from "./Pages/SavePassword/Password";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
-function App() {
+const App = () => {
+  const [savedata, setSaveData] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("Data");
+    if (storedData) {
+      setSaveData(JSON.parse(storedData));
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<Password savedata={savedata} setSaveData={setSaveData} />}
+        />
+        <Route
+          path="/show"
+          element={<Show savedata={savedata} setSaveData={setSaveData} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

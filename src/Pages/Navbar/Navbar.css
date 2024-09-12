@@ -1,0 +1,31 @@
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 5rem;
+  font-size: 1.5rem;
+  background-color: rgba(152, 251, 152, 0.556);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  width: 31.4%;
+  margin: 1rem auto;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  ul {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+}
