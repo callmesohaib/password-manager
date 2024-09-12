@@ -68,5 +68,8 @@
     left: 0%;
     font-size: 1rem;
   }
+  .password-detail div p,.password-detail div h2 {
+    font-size: 1rem;
+  }
 
 }
