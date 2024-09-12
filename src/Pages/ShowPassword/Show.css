@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  width: 105%; /* Fixed width */
+  width: 105%;
 }
 
 .password-detail {
@@ -17,8 +17,8 @@
   color: black;
   font-size: 0.8rem;
   padding: 0.3rem;
-  width: 100%; /* Make the width fixed */
-  box-sizing: border-box; /* Include padding in width calculation */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .password-detail div {
@@ -27,14 +27,14 @@
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  width: 100%; /* Ensure each div fills the password-detail */
+  width: 100%;
 }
 
 .password-detail div p {
   font-size: 1.3rem;
-  word-break: break-word; /* Ensure long words break into multiple lines */
-  overflow-wrap: break-word; /* Allow wrapping for long text */
-  max-width: 100%; /* Prevent text from overflowing the container */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
   margin-left: 1rem;
 }
 
@@ -68,7 +68,7 @@
 @media screen and (max-width: 600px) {
   .password-details {
     grid-template-columns: repeat(1, 1fr);
-    width: 100%; 
+    width: 100%;
   }
 
   .no-data {
