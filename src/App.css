@@ -3,19 +3,24 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
 }
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("images/password-manager.jpeg") no-repeat center center/cover;
 }
-.container{
- min-width: 31.4%;
+.container {
+  min-width: 31.4%;
 }
 
-.main-container{
+.main-container {
   width: 100%;
   min-height: 83vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    height: 80vh;
+  }
 }
