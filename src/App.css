@@ -4,10 +4,14 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/password-manager.jpeg") no-repeat center center/cover;
+    url("images/password-manager.jpeg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 .container {
   min-width: 31.4%;
 }
@@ -20,8 +24,13 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("images/mbl-view.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
   .main-container {
     height: 75vh;
   }
-  
 }
